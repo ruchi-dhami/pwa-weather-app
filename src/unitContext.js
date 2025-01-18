@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 
 const UnitContext = createContext();
 
-export const UnitProvider = ({ props }) => {
+export const UnitProvider = ({ children }) => {
   const [unit, setUnit] = useState("C"); 
 
   const toggleUnit = () => {
@@ -11,7 +11,7 @@ export const UnitProvider = ({ props }) => {
 
   return (
     <UnitContext.Provider value={{ unit, toggleUnit }}>
-      { props }
+      { children }
     </UnitContext.Provider>
   );
 };
