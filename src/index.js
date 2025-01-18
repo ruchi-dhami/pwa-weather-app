@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { UnitProvider } from "./unitContext";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <UnitProvider>
+      <App />
+    </UnitProvider>
   </React.StrictMode>
 );
